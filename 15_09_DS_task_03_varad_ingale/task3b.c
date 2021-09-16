@@ -26,7 +26,7 @@ void push1(int data){
         ts.arr[ts.top1]=data;
     }
     else{
-        printf("Stack is Full\n");
+        printf("Stack Overflow\n");
     }
 }
 
@@ -37,25 +37,31 @@ void push2(int data){
         ts.arr[ts.top2]=data;
     }
     else{
-        printf("Stack is Full\n");
+        printf("Stack Overflow\n");
     }
 }
 
 // Write the code to pop the data from Stack 1
-int pop1(){
+void pop1(){
     if(ts.top1>=0){
         int p =ts.arr[ts.top1];
         ts.top1--;
-        return p;
+        printf(">> The popped element is %d. \n", p);
+    }
+    else{
+        printf("Stack Underflow\n");
     }
 }
 
 // Write the code to pop the data from Stack 2
-int pop2(){
+void pop2(){
     if(ts.top2<MAX){
         int p=ts.arr[ts.top2];
         ts.top2--;
-        return p;
+        printf(">> The popped element is %d. \n", p);
+    }
+    else{
+        printf("Stack Underflow\n");
     }
 }
 
@@ -85,12 +91,10 @@ int main() {
                 push2(element);
                 break;
             case 3:
-                poppedElement = pop1();
-                printf(">> The popped element is %d. \n", poppedElement);
+                pop1();
                 break;
             case 4:
-                poppedElement = pop2();
-                printf(">> The popped element is %d. \n", poppedElement);
+                pop2();
                 break;
             case 0: 
                 printf("[!!] Exiting");
@@ -102,4 +106,4 @@ int main() {
     }
 
     return 0;
-}
+} 

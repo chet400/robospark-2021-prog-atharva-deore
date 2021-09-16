@@ -10,6 +10,7 @@
 #include<string.h>
 #define MAX 20
 
+
 // Structure for stack
 struct stack {
   char st[MAX];
