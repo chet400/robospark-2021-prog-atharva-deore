@@ -1,5 +1,5 @@
 // Write a code to check if a given set of character array consisting of {,},(,),[,] is balanced or not.
-// Test Cases:
+// Test Cases: 
 // Input 1: []{([])} Output: Yes
 // Input 2: {(}{)} Output: No
 // Input 3: {[]})( Output: No
@@ -108,7 +108,6 @@ int isBalanced(char exp[]){
         return 0;
     }
 }
-
 // Driver Code
 int main() {
 

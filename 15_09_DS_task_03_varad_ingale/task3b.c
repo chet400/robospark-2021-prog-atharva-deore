@@ -1,5 +1,6 @@
 // Implement an optimal approach for implementing two stacks in a single array.
 
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
