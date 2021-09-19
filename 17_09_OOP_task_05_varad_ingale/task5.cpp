@@ -19,7 +19,6 @@ class Rectangle
             length =l;
             breadth=b;
         }
-        
         Rectangle()
         {
         length=0;
