@@ -40,7 +40,8 @@ int Rectangle::getArea(){
     return length*breadth;
 }
 
-int main(){
+int main()
+{
     Rectangle r1;
     r1.set1();
 	cout<<"Area of Rectangle is "<<r1.getArea()<<endl;
