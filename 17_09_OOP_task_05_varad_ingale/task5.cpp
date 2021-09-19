@@ -42,6 +42,7 @@ int Rectangle::getArea(){
 
 int main()
 {
+    
     Rectangle r1;
     r1.set1();
 	cout<<"Area of Rectangle is "<<r1.getArea()<<endl;
