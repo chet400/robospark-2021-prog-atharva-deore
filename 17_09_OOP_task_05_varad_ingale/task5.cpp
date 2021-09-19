@@ -6,46 +6,59 @@ class Rectangle
     public:
         int length;
         int breadth;
-        void setter();
-        void setter(int n);
-        void setter(int l,int b);
         int getArea();
- }rec;
-
-void Rectangle::setter(){
+        void set1(){
+            length=0;
+            breadth=0;
+        }
+        void set2(int n){
+            length=n;
+            breadth=n;
+        }
+        void set3(int l,int b){
+            length =l;
+            breadth=b;
+        }
+        
+        Rectangle()
+        {
         length=0;
         breadth=0;
-    }
-void Rectangle::setter(int n){
+        }
+        Rectangle(int n)
+        {
         length=n;
         breadth=n;
-    }
-void Rectangle::setter(int l,int b){
+        }
+        Rectangle(int l,int b)
+        {
         length=l;
         breadth=b;
-    }
+        }
+ };
+
 int Rectangle::getArea(){
     return length*breadth;
 }
 
 int main(){
-    rec.setter();
-    int a1 = rec.getArea();
-	cout<<"Area of Rectangle is "<< a1 <<endl;
-    int l,b;
+    Rectangle r1;
+    r1.set1();
+	cout<<"Area of Rectangle is "<<r1.getArea()<<endl;
+    int l;
     cout<<"Enter the number to set as both length and breadth ";
     cin>>l;
-    rec.setter(l);
-    int a2=rec.getArea();
-	cout<<"Area of Rectangle is "<< a2 <<endl;
+    Rectangle r2(l);
+    r2.set2(l);
+	cout<<"Area of Rectangle is "<<r2.getArea()<<endl;
     cout<<"Enter the length ";
     int n,m;
     cin>>n;
     cout<<"Enter the breadth ";
     cin>>m;
-    rec.setter(n,m);
-    int a3=rec.getArea();
-	cout << "Area of Rectangle is "<< a3 <<endl;
+    Rectangle r3(m,n);
+    r3.set3(m,n);
+	cout<< "Area of Rectangle is "<<r3.getArea()<<endl;
 	return 0;
 }
 
